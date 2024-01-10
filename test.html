@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibyanshu's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d041b676eb.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="styleHs.css">// -->
+    
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            /*background-color: #1c305c;*/
+            background:linear-gradient(to right, rgb(23, 23, 23),#253c6d);
+            color: whitesmoke;
+            font-family: 'Poppins', sans-serif;
+            background: gradi;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(64, 62, 65);
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li{
+            list-style: none;
+            margin: 0 15px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: blueviolet;  
+        }
+
+        main hr{
+            background-color: aliceblue;
+            border: 0;
+            height: 1.2px;
+            margin: 20px 84px;
+        }
+
+        .left{
+            font-size: 1.65rem;
+        }
+
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin:95px 0;
+        }
+
+        .firstSection div{
+            width: 30%;
+        }
+
+        .leftSection{
+            font-size: 3rem;
+        }
+
+        .leftSection .btn{
+            font-family: 'Poppins', sans-serif;
+            background-color:rgb(46 37 54);
+            padding: 12px;
+            color: whitesmoke;
+            border: 2px solid silver;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            opacity: 1;
+            transition: 0.8s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .leftSection .btn:hover{
+            font-weight: bold;
+            color: whitesmoke;
+            background-color:#4d4848;
+            opacity: 0.9;
+        }
+
+        .leftSection .btn::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: #7b6c97;
+            z-index: -1;
+            transition: 0.8s;
+            top :0;
+            border-radius: 0 0 50% 50%;
+        }
+        .leftSection .btn:hover::before{
+            height: 180%;
+        }
+
+        .rightSection img{
+            width: 97%;   /*85%*/
+            border-radius: 20px;
+            transition: 0.5s ease;
+            cursor: pointer;
+            box-shadow: black;
+        }
+        
+        .rightSection img:hover{
+            transform: scale(1.1);
+            box-shadow: 10px,10px,black;
+        }
+
+        .purple{
+            color: rgb(255 169 106);
+        }
+        #element{
+            color: rgb(255 169 106);
+        }
+        
+        /*--------------About Me CSS-----------*/
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+            height:90vh;
+        }
+
+        .secondSection h1{
+            font-size: 1.9rem;  
+        }
+        
+        .text-gray{
+            color: gray;    
+        }
+
+        .secondSection .box{
+            background: white;
+            width: 77vw;
+            height: 2px;
+            margin: 56px 40px;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .secondSection .vertical{
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+        
+        .image-top{
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title{
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 20px;
+        }
+
+        .vertical-desc{
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 13px;
+        }
+        /*----------------My Services CSS------------*/
+
+        .thirdSection{
+            max-width: 80vw;
+            margin: auto;
+            height:90vh;
+        }
+        .thirdSection h1{
+            font-size: 2.3rem;
+            margin-top: 100px;
+        }
+
+        .thirdSection .container1{   /*service-list*/
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            grid-gap:40px;
+            margin-top:50px ;
+        }
+
+        .thirdSection .container1 div{
+            background-color: #4d4848;
+            padding: 40px;
+            font-size: 13px;
+            font-weight: 300;
+            border-radius: 10px;
+            transition: background 0.5s, transform 0.5s;
+        }
+
+        .thirdSection .container1 div i{
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        .thirdSection .container1 div h2{
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .thirdSection .container1 div a{
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .thirdSection .container1 div:hover{
+            background-color: #8b5bbb;
+            transform: translateY(-10px);
+        }
+        /*-------------My Work------------------------*/
+
+        .fourthSection{
+            max-width: 80vw;
+            margin: auto;
+            height:90vh;
+        }
+        .fourthSection h1{
+            font-size: 2.3rem;
+            margin-top: 100px;
+        }
+        .fourthSection div{
+            position: relative;
+            margin-top: -70px;
+        }
+        .fourthSection p{
+            margin-top: -100px;
+            margin-left: 50px;
+            font-size: 23px;
+        }
+        .fourthSection p::target-text{
+            opacity: 0;
+        }
+        /*Experiment start for horizontal scrolling*/
+        #image-track {
+            display: flex;
+            gap: 4vmin;
+            left: 50%;
+            top: 50%;
+            transform: translate(0%, -50%); 
+            user-select: none; /* -- Prevent image highlighting -- */
+        }
+          
+        #image-track > .image {
+            width: 40vmin;
+            height: 56vmin;
+            object-fit: cover;
+            object-position: 100% center;
+        }   
+        /*Experiment end*/
+
+
+        /*---------------Footer's CSS-----------------*/
+        footer{
+            color: white;
+            background-color: rgb(30 24 33);
+            height: 30px;
+        }
+        .footer{
+            display: flex;
+            margin: 23px 122px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Dibyanshu's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About Me</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">My Work</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">
+                Dibyanshu</span> I am a passionate
+                <span id="element"></span>
+                <div class="buttons">
+                    <button onclick="window.open('Dibyanshu_KumarD4.pdf')" class="btn link1 ">Resume</button>
+                    <button class="btn link2 " id="link2id">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="Subject1.png" alt="">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="secondSection">
+            <span class="text-gray">What i have done so far</span>
+            <h1>About Me</h1>
+            <div class="box">
+                <div class="vertical">
+                    <i class="fa-solid fa-user-tie image-top"></i>
+                    <div class="vertical-title">
+                        Intern at Deloitte (2024-2025)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus voluptatem eligendi repudiandae sequi explicabo vel numquam veritatis voluptatum beatae odit. Minima, adipisci dignissimos.
+                    </div>
+                </div>
+            
+                <div class="vertical">
+                    <i class="fa-solid fa-graduation-cap image-top"></i>
+                    <div class="vertical-title">
+                        Senior College (2021-2025)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus voluptatem eligendi repudiandae sequi explicabo vel numquam veritatis voluptatum beatae odit. Minima, adipisci dignissimos.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-school image-top"></i>
+                    <div class="vertical-title">
+                        Intermediate  (2019-2021)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus voluptatem eligendi repudiandae sequi explicabo vel numquam veritatis voluptatum beatae odit. Minima, adipisci dignissimos.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-school image-top"></i>
+                    <div class="vertical-title">
+                        Maticulation (2019-2009)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus voluptatem eligendi repudiandae sequi explicabo vel numquam veritatis voluptatum beatae odit. Minima, adipisci dignissimos.
+                    </div>
+                </div>  
+            
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="thirdSection">
+            <h1>My Services</h1>
+            <div class="container1">
+                <div class="webDesign">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet. Vel accusamus doloribus ea quia ipsam et nimaiores voluptatum</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="UIDesign">
+                    <i class="fa-solid fa-code-fork"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet. Vel accusamus doloribus ea quia ipsam et nimaiores voluptatum</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="AppDesign">
+                    <i class="fa-brands fa-android"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet. Vel accusamus doloribus ea quia ipsam et nimaiores voluptatum</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="fourthSection">
+            <h1>My Work</h1>
+            <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                <img class="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                <img class="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
+                <img class="image" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                <img class="image" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                <img class="image" src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+                <img class="image" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" />
+               
+            </div>
+            <p><--Drag to view</p>
+        </section>
+
+        <hr>
+
+        <section class="fifthSection">
+            <h1>Contact Me</h1>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Dk Developer Portfolio</h3>
+            </div>
+            <div class="footer-second"></div>
+            <div class="footer-third"></div>
+            <div class="footer-forth"></div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer'],
+          typeSpeed: 50,
+        });
+      </script>
+      <script src="index.js" charset="utf-8"></script>
+      <script src="indexHs.js" charset="utf-8"></script>
+</body>
+</html>
